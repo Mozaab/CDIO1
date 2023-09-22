@@ -1,1 +1,7 @@
-class Dice 
+class Dice { 
+
+
+
+private static 
+
+}
