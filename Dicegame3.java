@@ -15,6 +15,7 @@ public class Dicegame3 {
         System.out.print("Indtast spiller 2's navn: ");
         String player2Name = scanner.nextLine();
 
+        
         int player1Score = 0;
         int player2Score = 0;
         int turn = 0;
@@ -38,13 +39,18 @@ public class Dicegame3 {
             
                 System.out.println(player1Name + "'s point: " + (player1Score));
             
-
+                if (dice1 == dice2){
+                    System.out.println(player1Name + "'s Får et ekstra slag for at slå to ens!");
+                    turn = 0;
+                } else {
+                    turn = 1;
+                }
 
             if (player1Score >= 40) {
                 System.out.println(player1Name + " vinder!!!!");
                 break;
             }
-            turn = 1;
+            
         } else {
             System.out.println(player2Name + "'s tur. Tryk Enter for at rulle med terningerne.");
             scanner.nextLine();
@@ -64,12 +70,19 @@ public class Dicegame3 {
                 System.out.println(player2Name + "'s point: " + (player2Score));
 
 
+                if (dice3 == dice4){
+                    System.out.println(player2Name + "'s Får et ekstra slag for at slå to ens!");
+                    turn = 1;
+                } else {
+                    turn = 0;
+                }
+
             if (player2Score >= 40) {
                 System.out.println(player2Name + " vinder!!!!");
                 break;
             }
-            turn = 0;
-
+            
+            
         }
     }
         scanner.close();
