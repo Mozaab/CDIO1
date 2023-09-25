@@ -44,8 +44,9 @@ public class Dicegame3 {
             //Hvis player1 rammer 2 6'ere
                 if (dice1 == 6 && dice2 == 6){
                     int rem = 12;
-            
                 
+                
+
                 if (rem ==12 && dice1 == 6 && dice2 == 6){
                     System.out.println(player1Name + "har slået to 6'ere! " +player1Name + " vinder!!!!");
                 break;
@@ -68,7 +69,7 @@ public class Dicegame3 {
 
             
             //Hvis player2 slår to 6'ere
-            if ((dice3-1 == 6 && dice4-1 == 6) && (dice3 == 6 && dice4 == 6)){
+            if (dice3 == 6 && dice4 == 6){
                 System.out.println(player2Name + "har slået to 6'ere! " +player2Name + " vinder!!!!");
                 break;
             }
