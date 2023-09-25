@@ -50,6 +50,7 @@ public class Dicegame3 {
             if (dice3 == 6 && dice4 == 6){
                 System.out.println(player2Name + "har slået to 6'ere! " +player2Name + " vinder!!!!");
                 break;
+
             }
 
             System.out.println(player2Name + " rullede: " + dice3 + " og " + dice4);
