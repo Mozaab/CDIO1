@@ -45,6 +45,7 @@ public class Dicegame3 {
             int dice4 = rollDice(random);
             int sum2 = dice3 + dice4;
 
+            
             //Hvis player2 slår to 6'ere
             if (dice3 == 6 && dice4 == 6){
                 System.out.println(player2Name + "har slået to 6'ere! " +player2Name + " vinder!!!!");
@@ -68,15 +69,9 @@ public class Dicegame3 {
     }
     private static int rollDice(Random random) {
         return random.nextInt(6) + 1;
-    }{
-    
+    }
     
     
 
     
-        
-
-    
-
-    
-}}
+}
