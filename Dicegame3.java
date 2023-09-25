@@ -30,7 +30,7 @@ public class Dicegame3 {
                 System.out.println(player1Name + " rullede: " + dice1 + " og " + dice2);
 
                 if (dice1 == 1 && dice2 == 1) {
-
+                    System.out.println("ups du rullede to 1'ere");
                     player1Score = 0;
                 } else {
                     player1Score += sum1;
@@ -55,7 +55,7 @@ public class Dicegame3 {
             System.out.println(player2Name + " rullede: " + dice3 + " og " + dice4);
 
             if (dice3 == 1 && dice4 == 1) {
-
+                System.out.println("ups du rullede to 1'ere");
                     player2Score = 0;
                 } else {
                     player2Score += sum2;
