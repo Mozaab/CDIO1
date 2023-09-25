@@ -42,11 +42,14 @@ public class Dicegame3 {
             
 
             //Hvis player1 rammer 2 6'ere
-
-            if ((dice1-1 ==6 && dice2-1 ==6) && (dice1 == 6 && dice2 == 6)){
-                System.out.println(player1Name + "har slået to 6'ere! " +player1Name + " vinder!!!!");
+                if (dice1 == 6 && dice2 == 6){
+                    int rem = 12;
+            
+                
+                if (rem ==12 && dice1 == 6 && dice2 == 6){
+                    System.out.println(player1Name + "har slået to 6'ere! " +player1Name + " vinder!!!!");
                 break;
-            }
+                }}
 
             System.out.println(player1Name + " rullede: " + dice1 + " og " + dice2);
             System.out.println(player1Name + "'s point: " + (player1Score += sum1));
@@ -68,9 +71,8 @@ public class Dicegame3 {
             if ((dice3-1 == 6 && dice4-1 == 6) && (dice3 == 6 && dice4 == 6)){
                 System.out.println(player2Name + "har slået to 6'ere! " +player2Name + " vinder!!!!");
                 break;
-
             }
-
+            
             System.out.println(player2Name + " rullede: " + dice3 + " og " + dice4);
         
 
