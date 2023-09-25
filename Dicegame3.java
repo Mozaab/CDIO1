@@ -28,7 +28,7 @@ public class Dicegame3 {
             //Hvis player1 rammer 2 6'ere
 
             if (dice1==6 && dice2==6){
-                System.out.println(player1Name + " vinder!!!!");
+                System.out.println(player1Name + "har slået to 6'ere! " +player1Name + " vinder!!!!");
                 break;
             }
 
@@ -36,7 +36,7 @@ public class Dicegame3 {
             System.out.println(player1Name + "'s point: " + (player1Score += sum1));
 
             if (player1Score >= 40) {
-                System.out.println(player1Name + "har slået to 6'ere! " +player1Name + " vinder!!!!");
+                System.out.println(player1Name +  "vinder!!!!");
                 break;
             }
             System.out.println(player2Name + "'s tur. Tryk Enter for at rulle med terningerne.");
