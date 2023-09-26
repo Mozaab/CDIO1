@@ -18,6 +18,8 @@ public class Dicegame3 {
         int player1Score = 0;
         int player2Score = 0;
         int turn = 0;
+        int p1sekser = 0;
+        int p2sekser = 0;
         while (player1Score < 40 && player2Score < 40) {
 
             
@@ -27,6 +29,8 @@ public class Dicegame3 {
                 int dice1 = rollDice(random);
                 int dice2 = rollDice(random);
                 int sum1 = dice1 + dice2;
+                
+
                 System.out.println(player1Name + " rullede: " + dice1 + " og " + dice2);
                 
                 
@@ -43,17 +47,19 @@ public class Dicegame3 {
 
             //Hvis player1 rammer 2 6'ere
                 if (dice1 == 6 && dice2 == 6){
-                    int rem = 12;
-                
+                System.out.println(player1Name + " Rullede 2 seksere");
+             }
+                if (p1sekser > 0){
+                    System.out.println(player1Name + " rullede 2 seksere igen og vinder");
+                   break;
+                }
+                if (p1sekser < 1) {
+                    p1sekser = 1;
+                }
+                    
                 
 
-                if (rem ==12 && dice1 == 6 && dice2 == 6){
-                    System.out.println(player1Name + "har slået to 6'ere! " +player1Name + " vinder!!!!");
-                break;
-                }}
 
-            System.out.println(player1Name + " rullede: " + dice1 + " og " + dice2);
-            System.out.println(player1Name + "'s point: " + (player1Score += sum1));
 
             if (player1Score >= 40) {
                 System.out.println(player1Name +  "vinder!!!!");
@@ -66,15 +72,27 @@ public class Dicegame3 {
             int dice3 = rollDice(random);
             int dice4 = rollDice(random);
             int sum2 = dice3 + dice4;
+            
 
             
             //Hvis player2 slår to 6'ere
-            if (dice3 == 6 && dice4 == 6){
-                System.out.println(player2Name + "har slået to 6'ere! " +player2Name + " vinder!!!!");
-                break;
-            }
+           
+                
             
             System.out.println(player2Name + " rullede: " + dice3 + " og " + dice4);
+
+             if (dice3 == 6 && dice4 == 6){
+                System.out.println(player2Name + " Rullede 2 seksere");
+             }
+                if (p2sekser > 0){
+                    System.out.println(player2Name + " rullede 2 seksere igen og vinder");
+                   break;
+                }
+                if (p2sekser < 1) {
+                    p2sekser = 1;
+                }
+                    System.out.println(+p2sekser);
+                
         
 
             if (dice3 == 1 && dice4 == 1) {
@@ -97,7 +115,7 @@ public class Dicegame3 {
     
 }
     private static int rollDice(Random random) {
-        return random.nextInt(6) + 1;
+        return 6;
     }
     
 }
