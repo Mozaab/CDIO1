@@ -46,6 +46,8 @@ public class Dicegame3 {
                     turn = 1;
                 }
 
+                
+
             if (player1Score >= 40) {
                 System.out.println(player1Name + " vinder!!!!");
                 break;
