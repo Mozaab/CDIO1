@@ -19,7 +19,9 @@ public class Dicegame3 {
         int player1Score = 0;
         int player2Score = 0;
         int turn = 0;
-        while (player1Score < 40 && player2Score < 40) {
+        int player1Win = 0;
+        int player2Win = 0;
+        while (player1Win < 2 && player2Win < 2) {
 
             
             if (turn == 0) {
@@ -29,6 +31,12 @@ public class Dicegame3 {
                 int dice2 = rollDice(random);
                 int sum1 = dice1 + dice2;
                 System.out.println(player1Name + " rullede: " + dice1 + " og " + dice2);
+
+                if (player1Win == 1 && dice1==dice2) {
+                        System.out.println(player1Name + " vinder!!!!");
+                        break;             
+            }
+
 
                 if (dice1 == 1 && dice2 == 1) {
                     System.out.println("ups du rullede to 1'ere");
@@ -49,8 +57,8 @@ public class Dicegame3 {
                 
 
             if (player1Score >= 40) {
-                System.out.println(player1Name + " vinder!!!!");
-                break;
+                System.out.println("Du skal nu slå 2 ens for at vinde!");
+                player1Win = 1;
             }
             
         } else {
@@ -62,7 +70,13 @@ public class Dicegame3 {
 
             System.out.println(player2Name + " rullede: " + dice3 + " og " + dice4);
 
-            if (dice3 == 1 && dice4 == 1) {
+            if (player2Win == 1 && dice3==dice4) {
+
+                        System.out.println(player2Name + " vinder!!!!");
+
+                        break;
+                    }
+                            if (dice3 == 1 && dice4 == 1) {
                 System.out.println("ups du rullede to 1'ere");
                     player2Score = 0;
                 } else {
@@ -80,16 +94,21 @@ public class Dicegame3 {
                 }
 
             if (player2Score >= 40) {
-                System.out.println(player2Name + " vinder!!!!");
-                break;
+                System.out.println("Du skal nu slå 2 ens for at vinde!");
+                player2Win = 1;
+                
+                 
             }
             
             
         }
+        
     }
-        scanner.close();
-    }
+    scanner.close();
+}
+    
     private static int rollDice(Random random) {
         return random.nextInt(6) + 1;
     }
+    
 }
