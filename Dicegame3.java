@@ -58,7 +58,11 @@ public class Dicegame3 {
 
             if (player1Score >= 40) {
                 System.out.println(player1Name + " skal nu slå 2 ens for at vinde!");
-                player1Win = 1;
+                if (dice1 == 1 && dice2 == 1){
+                    player1Score = 0;
+                }else {
+                   player1Win = 1; 
+                }
             }
             
         } else {
@@ -95,7 +99,12 @@ public class Dicegame3 {
 
             if (player2Score >= 40) {
                 System.out.println(player2Name + " skal nu slå 2 ens for at vinde!");
-                player2Win = 1;
+                if (dice3 == 1 && dice4 == 1){
+                    player2Score = 0;
+                }else {
+                   player2Win = 1; 
+                }
+                
                 
                  
             }
