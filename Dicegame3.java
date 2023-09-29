@@ -35,23 +35,25 @@ public class Dicegame3 {
                 if (player1Win == 1 && dice1 == 1 && dice2 == 1) {
                     player1Score = 0;
 
-                    }else if (player1Win == 1 && dice1 == dice2) {
+                    } else if (player1Win == 1 && dice1 == dice2) {
                         System.out.println(player1Name + " vinder!!!!");
+                        player1Win = 1;
                         break;             
                     }
 
             
              
                 if (dice1 == 1 && dice2 == 1) {
-                    System.out.println("ups du rullede to 1'ere");
+                    System.out.println("Ups du rullede to 1'ere");
                     player1Score = 0;
+                    player1Win = 0;
                 } else {
                     player1Score += sum1;
                 }
             
                 System.out.println(player1Name + "'s point: " + (player1Score));
             
-                if (dice1 == dice2){
+                if (player1Win == 0 && dice1 == dice2){
                     System.out.println(player1Name + "'s Får et ekstra slag for at slå to ens!");
                     turn = 0;
                 } else {
@@ -62,11 +64,7 @@ public class Dicegame3 {
 
             if (player1Score >= 40) {
                 System.out.println(player1Name + " skal nu slå 2 ens for at vinde!");
-                if (dice1 == 1 && dice2 == 1){
-                    player1Score = 0;
-                }else {
-                   player1Win = 1; 
-                }
+                player1Win = 1;
             }
             
         } else {
@@ -81,13 +79,15 @@ public class Dicegame3 {
             if (player2Win == 1 && dice3 == 1 && dice4 == 1) {
                 player2Score = 0;
 
-                }else if (player2Win == 1 && dice3 == dice4) {
+                } else if (player2Win == 1 && dice3 == dice4) {
                     System.out.println(player2Name + " vinder!!!!");
+                    player2Win = 1;
                     break;             
                 }
-                            if (dice3 == 1 && dice4 == 1) {
+                    if (dice3 == 1 && dice4 == 1) {
                 System.out.println("ups du rullede to 1'ere");
                     player2Score = 0;
+                    player2Win = 0;
                 } else {
                     player2Score += sum2;
                 }
@@ -95,7 +95,7 @@ public class Dicegame3 {
                 System.out.println(player2Name + "'s point: " + (player2Score));
 
 
-                if (dice3 == dice4){
+                if (player2Win == 0 && dice3 == dice4){
                     System.out.println(player2Name + "'s Får et ekstra slag for at slå to ens!");
                     turn = 1;
                 } else {
@@ -104,11 +104,8 @@ public class Dicegame3 {
 
             if (player2Score >= 40) {
                 System.out.println(player2Name + " skal nu slå 2 ens for at vinde!");
-                if (dice3 == 1 && dice4 == 1){
-                    player2Score = 0;
-                }else {
-                   player2Win = 1; 
-                }
+                player2Win = 1;
+                
                 
                 
                  
