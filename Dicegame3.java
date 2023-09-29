@@ -32,12 +32,16 @@ public class Dicegame3 {
                 int sum1 = dice1 + dice2;
                 System.out.println(player1Name + " rullede: " + dice1 + " og " + dice2);
 
-                if (player1Win == 1 && dice1==dice2) {
+                if (player1Win == 1 && dice1 == 1 && dice2 == 1) {
+                    player1Score = 0;
+
+                    }else if (player1Win == 1 && dice1 == dice2) {
                         System.out.println(player1Name + " vinder!!!!");
                         break;             
-            }
+                    }
 
-
+            
+             
                 if (dice1 == 1 && dice2 == 1) {
                     System.out.println("ups du rullede to 1'ere");
                     player1Score = 0;
@@ -74,12 +78,13 @@ public class Dicegame3 {
 
             System.out.println(player2Name + " rullede: " + dice3 + " og " + dice4);
 
-            if (player2Win == 1 && dice3==dice4) {
+            if (player2Win == 1 && dice3 == 1 && dice4 == 1) {
+                player2Score = 0;
 
-                        System.out.println(player2Name + " vinder!!!!");
-
-                        break;
-                    }
+                }else if (player2Win == 1 && dice3 == dice4) {
+                    System.out.println(player2Name + " vinder!!!!");
+                    break;             
+                }
                             if (dice3 == 1 && dice4 == 1) {
                 System.out.println("ups du rullede to 1'ere");
                     player2Score = 0;
